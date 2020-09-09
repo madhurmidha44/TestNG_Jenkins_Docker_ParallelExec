@@ -16,5 +16,5 @@ public class Homepage {
 	}
 
 	
-	public By linkRediffmail=By.linkText("Rediffmail777");
+	public By linkRediffmail=By.linkText("Rediffmail77");
 }
