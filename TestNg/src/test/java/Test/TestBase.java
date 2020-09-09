@@ -29,14 +29,11 @@ public class TestBase{
     
     public ExtentTest test;
 	
-	@SuppressWarnings("deprecation")
 	@BeforeMethod(alwaysRun = true)
     public void beforeTest(Method method) throws Exception {
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--incognito");
-	    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-	    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-	    driver = new ChromeDriver(capabilities);
+	    driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    test = extent.startTest(method.getName());
