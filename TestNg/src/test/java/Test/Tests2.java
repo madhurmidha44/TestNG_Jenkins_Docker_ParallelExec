@@ -13,7 +13,7 @@ public class Tests2 extends TestBase{
 		String url="https://rediff.com";
 		test.setDescription("URL in test data is "+url);
 		driver.get(url);
-		var homepageObj=new Homepage(driver);
+		Homepage homepageObj=new Homepage(driver);
 		homepageObj.clickRediffmailLink();
 	}
 
