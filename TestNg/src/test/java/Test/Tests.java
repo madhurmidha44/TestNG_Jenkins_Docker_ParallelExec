@@ -10,11 +10,10 @@ public class Tests extends TestBase{
 	public void Test() throws InterruptedException
 	{
 		String url="https://rediff.com";
-		//test.setDescription("URL in test data is "+url);
+		test.setDescription("URL in test data is "+url);
 		driver.get(url);
 		Homepage homepageObj=new Homepage(driver);
 		homepageObj.clickRediffmailLink();
-		test.setDescription("URL in test data is "+url);
 	}
 
 }
