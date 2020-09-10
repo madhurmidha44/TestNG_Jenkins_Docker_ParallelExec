@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.*;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import com.google.common.io.Files;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -24,15 +25,24 @@ public class TestBase{
 	
 	public RemoteWebDriver driver;
 	
-    public static ExtentReports extent=new ExtentReports(System.getProperty("user.dir") + "\\Reports\\Exec_report_"
+    public static ExtentReports extent=new ExtentReports(System.getProperty("user.dir") + "/Reports/Exec_report_"
     		+ new SimpleDateFormat("yyyyMMddHHmm").format(new Date()) + ".html", true);
     
     public ExtentTest test;
 	
 	@BeforeMethod(alwaysRun = true)
     public void beforeTest(Method method) throws Exception {
+				
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--incognito");
+	    options.addArguments("--headless");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--start-maximixed");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
 	    driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -63,6 +73,16 @@ public class TestBase{
 	extent.endTest(test);
 	extent.flush();
 	driver.quit();
+    }
+    
+    @AfterSuite(alwaysRun = true)
+    public void afterSuite() throws Exception { 
+    	extent.close(); 	
+    	String os=System.getProperty("os.name");
+//    	if(!os.contains("Window"))
+//    	{
+//    		Runtime.getRuntime().exec("docker cp test11.txt C:\\Users\\mmidha\\Desktop");
+//    	}
     }
    
 
