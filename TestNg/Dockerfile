@@ -20,16 +20,12 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-
-# FROM debian:jessie
-ENV CHROME_VERSION "google-chrome-stable"
-RUN sed -i -- 's&deb http://deb.debian.org/debian jessie-updates main&#deb http://deb.debian.org/debian jessie-updates main&g' /etc/apt/sources.list \
-  && apt-get update && apt-get install wget -y
-ENV CHROME_VERSION "google-chrome-stable"
+RUN apt-get install wget -y
+# Set the Chrome repo.
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-  && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list \
-  && apt-get update && apt-get -qqy install ${CHROME_VERSION:-google-chrome-stable}
-ENTRYPOINT ["google-chrome","--version"] 
+    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+# Install Chrome.
+RUN apt-get update && apt-get -y install google-chrome-stable
 
 
 # To run browser in headless mode
@@ -43,7 +39,7 @@ ENV CHROMEDRIVER_DIR /chromedriver
 RUN mkdir $CHROMEDRIVER_DIR
 
 RUN apt-get install unzip -y
-RUN apt-get install wget -y
+
 
 # Download and install Chromedriver
 RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
