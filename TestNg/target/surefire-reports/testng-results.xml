@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Test-method Suite" duration-ms="20696" started-at="2020-09-10T16:59:57 AEST" finished-at="2020-09-10T17:00:18 AEST">
+  <suite name="Test-method Suite" duration-ms="19908" started-at="2020-09-11T14:42:19 AEST" finished-at="2020-09-11T14:42:39 AEST">
     <groups>
     </groups>
-    <test name="Test-method test" duration-ms="20696" started-at="2020-09-10T16:59:57 AEST" finished-at="2020-09-10T17:00:18 AEST">
+    <test name="Test-method test" duration-ms="19908" started-at="2020-09-11T14:42:19 AEST" finished-at="2020-09-11T14:42:39 AEST">
       <class name="Test.Tests">
-        <test-method status="PASS" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:Test.Tests@1fc2b765]" name="beforeTest" is-config="true" duration-ms="15463" started-at="2020-09-10T16:59:57 AEST" finished-at="2020-09-10T17:00:12 AEST">
+        <test-method status="PASS" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:Test.Tests@cb0ed20]" name="beforeTest" is-config="true" duration-ms="14952" started-at="2020-09-11T14:42:19 AEST" finished-at="2020-09-11T14:42:34 AEST">
           <params>
             <param index="0">
               <value>
@@ -18,28 +18,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Test()[pri:0, instance:Test.Tests@1fc2b765]" name="Test" duration-ms="4086" started-at="2020-09-10T17:00:12 AEST" finished-at="2020-09-10T17:00:17 AEST">
+        <test-method status="PASS" signature="Test()[pri:0, instance:Test.Tests@cb0ed20]" name="Test" duration-ms="3839" started-at="2020-09-11T14:42:34 AEST" finished-at="2020-09-11T14:42:38 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->
-        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:Test.Tests@1fc2b765]" name="afterTest" is-config="true" duration-ms="1062" started-at="2020-09-10T17:00:17 AEST" finished-at="2020-09-10T17:00:18 AEST">
+        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:Test.Tests@cb0ed20]" name="afterTest" is-config="true" duration-ms="1051" started-at="2020-09-11T14:42:38 AEST" finished-at="2020-09-11T14:42:39 AEST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test status=SUCCESS method=Tests.Test()[pri:0, instance:Test.Tests@1fc2b765] output={null}]]]>
+                <![CDATA[[TestResult name=Test status=SUCCESS method=Tests.Test()[pri:0, instance:Test.Tests@cb0ed20] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Test.Tests@1fc2b765]" name="afterSuite" is-config="true" duration-ms="62" started-at="2020-09-10T17:00:18 AEST" finished-at="2020-09-10T17:00:18 AEST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Test.Tests@cb0ed20]" name="afterSuite" is-config="true" duration-ms="72" started-at="2020-09-11T14:42:39 AEST" finished-at="2020-09-11T14:42:40 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- Test.Tests -->
       <class name="Test.Tests2">
-        <test-method status="PASS" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:Test.Tests2@75881071]" name="beforeTest" is-config="true" duration-ms="15209" started-at="2020-09-10T16:59:57 AEST" finished-at="2020-09-10T17:00:12 AEST">
+        <test-method status="PASS" signature="beforeTest(java.lang.reflect.Method)[pri:0, instance:Test.Tests2@8e24743]" name="beforeTest" is-config="true" duration-ms="14718" started-at="2020-09-11T14:42:19 AEST" finished-at="2020-09-11T14:42:34 AEST">
           <params>
             <param index="0">
               <value>
@@ -50,15 +50,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Test2()[pri:0, instance:Test.Tests2@75881071]" name="Test2" duration-ms="4387" started-at="2020-09-10T17:00:12 AEST" finished-at="2020-09-10T17:00:17 AEST">
+        <test-method status="PASS" signature="Test2()[pri:0, instance:Test.Tests2@8e24743]" name="Test2" duration-ms="4153" started-at="2020-09-11T14:42:34 AEST" finished-at="2020-09-11T14:42:38 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test2 -->
-        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:Test.Tests2@75881071]" name="afterTest" is-config="true" duration-ms="1070" started-at="2020-09-10T17:00:17 AEST" finished-at="2020-09-10T17:00:18 AEST">
+        <test-method status="PASS" signature="afterTest(org.testng.ITestResult)[pri:0, instance:Test.Tests2@8e24743]" name="afterTest" is-config="true" duration-ms="999" started-at="2020-09-11T14:42:38 AEST" finished-at="2020-09-11T14:42:39 AEST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test2 status=SUCCESS method=Tests2.Test2()[pri:0, instance:Test.Tests2@75881071] output={null}]]]>
+                <![CDATA[[TestResult name=Test2 status=SUCCESS method=Tests2.Test2()[pri:0, instance:Test.Tests2@8e24743] output={null}]]]>
               </value>
             </param>
           </params>
