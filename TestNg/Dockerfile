@@ -21,7 +21,6 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
 
-
 # FROM debian:jessie
 ENV CHROME_VERSION "google-chrome-stable"
 RUN sed -i -- 's&deb http://deb.debian.org/debian jessie-updates main&#deb http://deb.debian.org/debian jessie-updates main&g' /etc/apt/sources.list \
@@ -44,6 +43,7 @@ ENV CHROMEDRIVER_DIR /chromedriver
 RUN mkdir $CHROMEDRIVER_DIR
 
 RUN apt-get install unzip -y
+RUN apt-get install wget -y
 
 # Download and install Chromedriver
 RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
@@ -58,7 +58,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 
 
-#ENTRYPOINT ["mvn", "clean", "install", "-Dtestng.dtd.http=true"]
+ENTRYPOINT ["mvn", "clean", "install", "-Dtestng.dtd.http=true"]
 
 
 

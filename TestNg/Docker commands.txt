@@ -15,12 +15,13 @@ docker run -it --entrypoint /bin/bash <ImageId> -s
 
 3. Copy folder from local machine to running container:
 docker cp C:\Users\madhur.midha\Desktop\AddUsersWithViewEditRightsForConfluencePage f029fae608e8:/usr/src/app
+Copy folder from Container to local machine
+docker cp <NameOfContainer>:/usr/src/app/Reports .
 
 4. Details of running containers and images:
 See container id:
 docker ps –aq
 See container name:
-docker ps --format "{{.Names}}"
 See running images:
 docker image ls
 docker ps
